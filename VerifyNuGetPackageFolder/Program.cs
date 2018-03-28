@@ -15,7 +15,7 @@ namespace VerifyNuGetPackageFolder
             var dotnetFallback = Path.Combine(dotnetRootPath, ".dotnet", "NuGetPackagesFallback");
             var rootPath = @"C:\Program Files (x86)\Microsoft SDKs";
             var packages = System.IO.Path.Combine(rootPath, "NuGetPackages");
-            var packagesFallback = System.IO.Path.Combine(rootPath, "NuGetPackagesFallback");
+            var packagesFallback = System.IO.Path.Combine(rootPath, "NuGetFallbackFolder");
             var invalidFolders = VerifyPackageFolderIntegrity(packages);
             invalidFolders.Concat(VerifyPackageFolderIntegrity(packagesFallback));
             invalidFolders.Concat(VerifyPackageFolderIntegrity(dotnetFallback));
